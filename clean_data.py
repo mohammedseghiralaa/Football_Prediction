@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from src import config
+from .src import config
 
 logger = logging.getLogger(__name__)
 
@@ -105,14 +105,15 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(message)s")
 
     df = load_raw(config.RAW_PATH)
-    check_required_columns(df)
-    df = clean(df)
-    validate(df)
-    summarize(df)
+    print(df["Arsenal"])
+    # check_required_columns(df)
+    # df = clean(df)
+    # validate(df)
+    # summarize(df)
 
-    df.to_csv(config.CLEAN_PATH, index=False)
-    print(df.shape)
-    logger.info("Saved clean data to %s", config.CLEAN_PATH)
+    # df.to_csv(config.CLEAN_PATH, index=False)
+    # print(df.shape)
+    # logger.info("Saved clean data to %s", config.CLEAN_PATH)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,8 @@ RAW_PATH=DATA_DIR/"epl_final.csv"
 
 DATE_COL="MatchDate"
 TARGET_COL="FullTimeResult"
+FEATURES_PATH = DATA_DIR / "features.csv"
+ROLLING_WINDOW = 5
 VALID_RESULTS={"H","D","A"}
 CLEAN_PATH = DATA_DIR / "epl_clean.csv"
 REQUIRED_COLUMNS = [
