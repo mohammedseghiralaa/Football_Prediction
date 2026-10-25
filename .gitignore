@@ -1,6 +1,6 @@
 __pycache__/
-*.py[cod]
+*.pyc
 .venv/
-venv/
-.env
-.ipynb_checkpoints/
+.vscode/
+data/*.csv
+models/
